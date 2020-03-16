@@ -160,6 +160,46 @@ header {
 }
 /* header end */
 
+/* what is sms section start */
+.what_sms .container_area {
+  padding: 116px 70px 116px 165px;
+}
+.what_sms .what_sms_text h2 {
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 600;
+  color: #383784;
+  margin-bottom: 45px;
+}
+.what_sms .what_sms_text > p {
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: 0.27px;
+  color: #7674af;
+  font-weight: 500px;
+  margin-bottom: 36px;
+}
+.what_sms_text .sms_para {
+  display: flex;
+  margin-bottom: 44px;
+}
+.what_sms_text .sms_para span {
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: 0.27px;
+  color: #7674af;
+  font-weight: 500px;
+  margin-left: 15px;
+}
+.what_sms_text .sms_para i {
+  margin-top: 7px;
+}
+.what_sms .sms_image {
+  padding-top: 48px;
+  text-align: right;
+}
+/* what is sms section end */
+
 /* responsive */
 @media only screen and (max-width: 480px) {
   /* header start*/
