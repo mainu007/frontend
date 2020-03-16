@@ -1,0 +1,179 @@
+/* default style */
+a:hover {
+  text-decoration: none;
+}
+body {
+  font-family: cabin, sans-serif;
+}
+img {
+  max-width: 100%;
+}
+/* header start */
+header {
+  height: 704px;
+  background: url(../images/background/bg_image@2x.png) no-repeat #bf217b;
+  background-size: cover;
+  padding-top: 16px;
+}
+.main_header {
+  height: 70px;
+  padding: 0 70px;
+}
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  display: block;
+  text-align: right;
+}
+.menu li {
+  display: inline-block;
+  line-height: 70px;
+}
+.menu li a {
+  font-size: 16px;
+  font-family: cabin;
+  letter-spacing: 0.26px;
+  padding: 5px 12px;
+  color: #fff;
+  position: relative;
+}
+.menu li a::after {
+  content: "";
+  width: 0px;
+  height: 3px;
+  background: #fff79e;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.4s all;
+}
+.menu li a:hover:not(.active)::after {
+  width: 100%;
+}
+.menu li a.active::after {
+  content: "";
+  width: 18px;
+  height: 3px;
+  background: #fff79e;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s all;
+}
+.sign_menu {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sign_menu a {
+  font-family: cabin;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 8px;
+  transition: 0.4s all;
+}
+.sign_menu .login {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.27px;
+  text-decoration: underline;
+  color: #ffb073;
+  padding: 0 12px;
+}
+.sign_menu .login:hover {
+  text-decoration: none;
+}
+.sign_menu .sign_up {
+  color: #ffc496;
+  background: #fff79e3d;
+  border: 1px solid #ffb073;
+  margin: 0 15px;
+}
+.sign_menu .sign_up:hover {
+  background: #ff882b;
+  border-color: #ff882b;
+  color: #fff79e;
+}
+.sign_menu .download_api {
+  color: #fff79e;
+  background: #ff882b;
+}
+.sign_menu .download_api:hover {
+  color: #ffc496;
+  background: #fff79e3d;
+  border: 1px solid #ffb073;
+}
+
+/* slider */
+.slider {
+  padding: 0 165px;
+  margin-top: 130px;
+  font-family: cabin;
+}
+.slider .slider_container {
+  max-width: 509px;
+  width: 100%;
+}
+.slider h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.7px;
+  line-height: 56px;
+  margin-bottom: 40px;
+}
+.slider p {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.88px;
+  color: #ffb073;
+  margin-bottom: 70px;
+}
+.slider_button .get_start {
+  padding: 12px 29px;
+  font-size: 18px;
+  font-weight: 700;
+  background: #4bcf3d;
+  color: #fff;
+  transition: 0.4s;
+}
+.slider_button .get_start:hover {
+  background: #3fb832;
+}
+.slider_button .download_here {
+  padding: 12px 23px;
+}
+.slider_button .download_here span {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: underline;
+  transition: 0.4s;
+}
+.slider_button .download_here:hover span {
+  text-decoration: none;
+}
+/* header end */
+
+/* responsive */
+@media only screen and (max-width: 480px) {
+  /* header start*/
+  .main_header {
+    padding: 0 20px;
+  }
+  .slider {
+    padding: 0 20px;
+  }
+  .slider h2 {
+    font-size: 32px;
+    line-height: 30px;
+  }
+  .slider_button {
+    text-align: center;
+  }
+}
