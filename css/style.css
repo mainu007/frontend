@@ -1,6 +1,7 @@
 /* default style */
 :root {
   --main-text: #383784;
+  --secondary-text: #7674af;
 }
 a:hover {
   text-decoration: none;
@@ -200,7 +201,7 @@ header {
   font-size: 17px;
   line-height: 28px;
   letter-spacing: 0.27px;
-  color: #7674af;
+  color: var(--secondary-text);
   font-weight: 500px;
   margin-bottom: 36px;
 }
@@ -212,7 +213,7 @@ header {
   font-size: 17px;
   line-height: 28px;
   letter-spacing: 0.27px;
-  color: #7674af;
+  color: var(--secondary-text);
   font-weight: 500px;
   margin-left: 15px;
 }
@@ -257,14 +258,14 @@ header {
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0.32px;
-  color: #7674af;
+  color: var(--secondary-text);
   margin-bottom: 30px;
 }
 .try_it_now .try_content p:last-child {
   width: 100%;
   font-size: 15px;
   line-height: 22px;
-  color: #7674af;
+  color: var(--secondary-text);
   margin-top: 20px;
 }
 .try_it_now .try_content p:last-child span {
@@ -324,7 +325,7 @@ header {
 .why_sms .container_area {
   padding-top: 112px;
 }
-.why_sms_head h2 {
+.head_title h2 {
   font-size: 32px;
   line-height: 39px;
   letter-spacing: 0.77px;
@@ -334,7 +335,7 @@ header {
   margin-bottom: 75px;
   position: relative;
 }
-.why_sms_head h2::after {
+.head_title h2::after {
   content: "";
   width: 72px;
   height: 3px;
@@ -368,9 +369,38 @@ header {
   font-size: 15px;
   line-height: 24px;
   letter-spacing: 0.24px;
-  color: #7674af;
+  color: var(--secondary-text);
 }
 /* why choose sms end */
+
+/* work slider section start */
+.work_slide_section {
+  width: 100%;
+  padding: 0 259px;
+}
+.work_slide_section .container_area {
+  padding: 116px 0;
+}
+.works_slider .carousel-inner {
+  border-radius: 15px;
+}
+.works_slider .prev_btn {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+}
+.works_slider .prev_btn img {
+  padding-right: 15px;
+}
+.works_slider .next_btn {
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+}
+.works_slider .next_btn img {
+  padding-left: 15px;
+}
+/* work slider section end */
 
 /* responsive */
 @media only screen and (max-width: 1140px) {
@@ -379,8 +409,18 @@ header {
   }
   .slider,
   .what_sms,
-  .try_it_now {
+  .try_it_now,
+  .why_sms {
     padding: 0 70px;
+  }
+  .work_slide_section {
+    padding: 0 180px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .work_slide_section {
+    padding: 0 100px;
   }
 }
 
@@ -398,5 +438,18 @@ header {
   }
   .slider_button {
     text-align: center;
+  }
+  /* work slider */
+  .work_slide_section {
+    padding: 0 20px;
+  }
+  .works_slider .carousel-inner {
+    border-radius: 10px;
+  }
+  .works_slider .prev_btn {
+    display: none;
+  }
+  .works_slider .next_btn {
+    display: none;
   }
 }
