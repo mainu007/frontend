@@ -310,6 +310,8 @@ header {
 .try_it_now .try_content .started_button:hover {
   background: #3aa72e;
 }
+/* try it now section end */
+
 /* responsive */
 @media only screen and (max-width: 1140px) {
   .main_header {
