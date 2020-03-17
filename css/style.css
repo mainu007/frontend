@@ -141,7 +141,7 @@ header {
 .slider_button .get_start {
   padding: 12px 29px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   background: #4bcf3d;
   color: #fff;
   -webkit-transition: 0.4s all;
@@ -167,8 +167,12 @@ header {
 /* header end */
 
 /* what is sms section start */
+.what_sms {
+  width: 100%;
+  padding: 0 70px 0 165px;
+}
 .what_sms .container_area {
-  padding: 116px 70px 116px 165px;
+  padding: 116px 0;
 }
 .what_sms .what_sms_text h2 {
   font-size: 32px;
@@ -209,7 +213,8 @@ header {
   font-weight: 500px;
   margin-left: 15px;
 }
-.what_sms_text .sms_para i {
+.what_sms_text .sms_para .icon {
+  flex-shrink: 0;
   margin-top: 7px;
 }
 .what_sms .sms_image {
@@ -218,7 +223,105 @@ header {
 }
 /* what is sms section end */
 
+/* try it now section start */
+.try_it_now {
+  width: 100%;
+  background: transparent
+    linear-gradient(180deg, #fff3eb54 0%, #fff3eb00 19%, #fff3eb 100%) 0% 0%
+    no-repeat;
+  padding: 0 84.5px 0 165px;
+}
+.try_it_now .container_area {
+  padding: 64px 0;
+}
+.try_it_now .text_container {
+  display: flex;
+  justify-content: flex-end;
+}
+.try_it_now .try_content {
+  padding-top: 40px;
+}
+.try_it_now .try_content h2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: 0.51px;
+  color: #383784;
+  margin-bottom: 18px;
+}
+.try_it_now .try_content p {
+  width: 513px;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.32px;
+  color: #7674af;
+  margin-bottom: 30px;
+}
+.try_it_now .try_content p:last-child {
+  width: 100%;
+  font-size: 15px;
+  line-height: 22px;
+  color: #7674af;
+  margin-top: 20px;
+}
+.try_it_now .try_content p:last-child span {
+  color: #4bcf3d;
+}
+.try_it_now .try_content .input_email {
+  float: left;
+  min-height: 48px;
+  position: relative;
+}
+.try_it_now .try_content .input_email input {
+  max-width: 384px;
+  min-width: 384px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.24px;
+  height: 48px;
+  border: 0.64px solid #4bcf3d75;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 55px;
+}
+.try_it_now .try_content .input_email input::placeholder {
+  color: #a5a3ca;
+}
+.try_it_now .try_content .input_email .icon {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  transform: translateY(-50%);
+}
+.try_it_now .try_content .started_button {
+  min-height: 48px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0 32px;
+  color: #fff;
+  border-radius: 8px;
+  background: #4bcf3d;
+  margin-left: 10px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+.try_it_now .try_content .started_button:hover {
+  background: #3aa72e;
+}
 /* responsive */
+@media only screen and (max-width: 1140px) {
+  .main_header {
+    padding: 0 40px;
+  }
+  .slider,
+  .what_sms,
+  .try_it_now {
+    padding: 0 70px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   /* header start*/
   .main_header {
