@@ -47,6 +47,7 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
+  -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
 .menu li a:hover:not(.active)::after {
@@ -61,11 +62,13 @@ header {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
 .sign_menu {
   height: 70px;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
   justify-content: flex-end;
 }
@@ -75,6 +78,7 @@ header {
   font-weight: 500;
   padding: 9px 20px;
   border-radius: 8px;
+  -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
 .sign_menu .login {
@@ -140,7 +144,8 @@ header {
   font-weight: 700;
   background: #4bcf3d;
   color: #fff;
-  transition: 0.4s;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
 }
 .slider_button .get_start:hover {
   background: #3fb832;
@@ -153,7 +158,8 @@ header {
   font-weight: 500;
   color: #fff;
   text-decoration: underline;
-  transition: 0.4s;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
 }
 .slider_button .download_here:hover span {
   text-decoration: none;
@@ -170,6 +176,18 @@ header {
   font-weight: 600;
   color: #383784;
   margin-bottom: 45px;
+}
+.what_sms .what_sms_text .border_span {
+  position: relative;
+}
+.what_sms .what_sms_text .border_span::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #ed1c24;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
 }
 .what_sms .what_sms_text > p {
   font-size: 17px;
