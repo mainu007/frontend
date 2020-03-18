@@ -3,47 +3,57 @@
   --main-text: #383784;
   --secondary-text: #7674af;
 }
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: cabin, sans-serif;
+}
 a:hover {
   text-decoration: none;
 }
-body {
-  font-family: cabin, sans-serif;
-}
 img {
   max-width: 100%;
+}
+
+/* default button */
+.default_success_btn {
+  padding: 14px 29px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  background: #4bcf3d;
+  color: #fff;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+.default_success_btn:hover {
+  color: #fff !important;
+  background: #349c28 !important;
 }
 /* header start */
 header {
   height: 704px;
   background: url(../images/background/bg_image@2x.png) no-repeat #bf217b;
   background-size: cover;
-  padding-top: 16px;
 }
-.main_header {
-  height: 70px;
-  padding: 0 70px;
-}
-.menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  width: 100%;
-  display: block;
-  text-align: right;
-}
-.menu li {
-  display: inline-block;
-  line-height: 70px;
-}
-.menu li a {
+.my_nav_menu li a {
   font-size: 16px;
   font-family: cabin;
   letter-spacing: 0.26px;
   padding: 5px 12px;
-  color: #fff;
+  color: #fff !important;
   position: relative;
 }
-.menu li a::after {
+.my_nav_menu li a::after {
   content: "";
   width: 0px;
   height: 3px;
@@ -54,10 +64,10 @@ header {
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
-.menu li a:hover:not(.active)::after {
+.my_nav_menu li a:hover:not(.menu_active)::after {
   width: 100%;
 }
-.menu li a.active::after {
+.my_nav_menu li a.menu_active::after {
   content: "";
   width: 18px;
   height: 3px;
@@ -69,65 +79,39 @@ header {
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
-.sign_menu {
-  height: 70px;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  justify-content: flex-end;
-}
-.sign_menu a {
-  font-family: cabin;
-  font-size: 17px;
-  font-weight: 500;
-  padding: 9px 20px;
-  border-radius: 8px;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all;
-}
-.sign_menu .login {
+.nav_login_btn {
   font-size: 17px;
   font-weight: 500;
   letter-spacing: 0.27px;
-  text-decoration: underline;
   color: #ffb073;
+  text-decoration: underline;
   padding: 0 12px;
 }
-.sign_menu .login:hover {
+.nav_login_btn:hover {
   text-decoration: none;
+  color: #f8a15f;
 }
-.sign_menu .sign_up {
+.nav_signup_btn {
   color: #ffc496;
   background: #fff79e3d;
   border: 1px solid #ffb073;
   margin: 0 15px;
+  padding: 9px 23px;
 }
-.sign_menu .sign_up:hover {
-  background: #ff882b;
-  border-color: #ff882b;
-  color: #fff79e;
-}
-.sign_menu .download_api {
+.nav_api_btn {
   color: #fff79e;
   background: #ff882b;
-}
-.sign_menu .download_api:hover {
-  color: #ffc496;
-  background: #fff79e3d;
-  border: 1px solid #ffb073;
+  padding: 9px 23px;
 }
 
-/* slider */
-.slider {
-  padding: 0 165px;
-  margin-top: 130px;
-  font-family: cabin;
+/* top slider */
+.top_slider {
+  padding-top: 100px;
 }
-.slider .slider_container {
-  max-width: 509px;
-  width: 100%;
+.top_slider .slider_content {
+  width: 500px;
 }
-.slider h2 {
+.top_slider h2 {
   font-size: 44px;
   font-weight: 700;
   color: #fff;
@@ -135,29 +119,17 @@ header {
   line-height: 56px;
   margin-bottom: 40px;
 }
-.slider p {
+.top_slider p {
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.88px;
   color: #ffb073;
   margin-bottom: 70px;
 }
-.slider_button .get_start {
-  padding: 12px 29px;
-  font-size: 18px;
-  font-weight: 600;
-  background: #4bcf3d;
-  color: #fff;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all;
+.top_slider .download_here_btn {
+  padding: 14px 23px;
 }
-.slider_button .get_start:hover {
-  background: #3fb832;
-}
-.slider_button .download_here {
-  padding: 12px 23px;
-}
-.slider_button .download_here span {
+.top_slider .download_here_btn span {
   font-size: 17px;
   font-weight: 500;
   color: #fff;
@@ -165,17 +137,12 @@ header {
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
-.slider_button .download_here:hover span {
+.top_slider .download_here_btn:hover span {
   text-decoration: none;
 }
-/* header end */
-
 /* what is sms section start */
 .what_sms {
   width: 100%;
-  padding: 0 70px 0 165px;
-}
-.what_sms .container_area {
   padding: 116px 0;
 }
 .what_sms .what_sms_text h2 {
@@ -209,6 +176,9 @@ header {
   display: flex;
   margin-bottom: 44px;
 }
+.what_sms_text .sms_para:last-child {
+  margin-bottom: 0;
+}
 .what_sms_text .sms_para span {
   font-size: 17px;
   line-height: 28px;
@@ -223,7 +193,7 @@ header {
 }
 .what_sms .sms_image {
   padding-top: 48px;
-  text-align: right;
+  text-align: center;
 }
 /* what is sms section end */
 
@@ -232,20 +202,15 @@ header {
   width: 100%;
   background: transparent
     linear-gradient(180deg, #fff3eb54 0%, #fff3eb00 19%, #fff3eb 100%) 0% 0%
-    no-repeat;
-  padding: 0 84.5px 0 165px;
-}
-.try_it_now .container_area {
+    no-repeat padding-box;
   padding: 64px 0;
 }
-.try_it_now .text_container {
-  display: flex;
-  justify-content: flex-end;
-}
-.try_it_now .try_content {
+.try_it_now .text_content {
+  max-width: 556px;
+  width: 100%;
   padding-top: 40px;
 }
-.try_it_now .try_content h2 {
+.try_it_now .text_content h2 {
   font-size: 32px;
   line-height: 40px;
   font-weight: 700;
@@ -253,32 +218,28 @@ header {
   color: var(--main-text);
   margin-bottom: 18px;
 }
-.try_it_now .try_content p {
-  width: 513px;
+.try_it_now .text_content p {
+  padding-right: 30px;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0.32px;
   color: var(--secondary-text);
   margin-bottom: 30px;
 }
-.try_it_now .try_content p:last-child {
+.try_it_now .text_content p:last-child {
   width: 100%;
   font-size: 15px;
   line-height: 22px;
   color: var(--secondary-text);
   margin-top: 20px;
 }
-.try_it_now .try_content p:last-child span {
+.try_it_now .text_content p:last-child span {
   color: #4bcf3d;
 }
-.try_it_now .try_content .input_email {
-  float: left;
-  min-height: 48px;
+.try_it_now .text_content .input_email {
   position: relative;
 }
-.try_it_now .try_content .input_email input {
-  max-width: 384px;
-  min-width: 384px;
+.try_it_now .text_content .input_email input {
   width: 100%;
   font-size: 15px;
   line-height: 18px;
@@ -289,16 +250,16 @@ header {
   border-radius: 8px;
   padding-left: 55px;
 }
-.try_it_now .try_content .input_email input::placeholder {
+.try_it_now .text_content .input_email input::placeholder {
   color: #a5a3ca;
 }
-.try_it_now .try_content .input_email .icon {
+.try_it_now .text_content .input_email .icon {
   position: absolute;
   top: 50%;
   left: 17px;
   transform: translateY(-50%);
 }
-.try_it_now .try_content .started_button {
+.try_it_now .text_content .started_button {
   min-height: 48px;
   font-size: 19px;
   font-weight: 600;
@@ -307,11 +268,10 @@ header {
   color: #fff;
   border-radius: 8px;
   background: #4bcf3d;
-  margin-left: 10px;
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
-.try_it_now .try_content .started_button:hover {
+.try_it_now .text_content .started_button:hover {
   background: #3aa72e;
 }
 /* try it now section end */
@@ -320,9 +280,6 @@ header {
 .why_sms {
   width: 100%;
   background: #fff;
-  padding: 0 118px;
-}
-.why_sms .container_area {
   padding-top: 112px;
 }
 .head_title h2 {
@@ -365,7 +322,6 @@ header {
   margin-bottom: 15px;
 }
 .why_sms .why_sms_content .text_content p {
-  width: 80%;
   font-size: 15px;
   line-height: 24px;
   letter-spacing: 0.24px;
@@ -376,10 +332,11 @@ header {
 /* work slider section start */
 .work_slide_section {
   width: 100%;
-  padding: 0 259px;
+  padding-top: 76px;
+  padding-bottom: 116px;
 }
-.work_slide_section .container_area {
-  padding: 116px 0;
+.works_slider {
+  padding: 0 95px;
 }
 .works_slider .carousel-inner {
   border-radius: 15px;
@@ -402,54 +359,88 @@ header {
 }
 /* work slider section end */
 
+/* free trail section */
+.free_trial {
+  background: transparent linear-gradient(360deg, #f7fcf6 0%, #f7fcf600 100%) 0%
+    0% no-repeat padding-box;
+}
+/* free trail section */
+
+/* client group start */
+.client_group {
+  width: 100%;
+  padding-top: 116px;
+  padding-bottom: 50px;
+}
+.client_group .client_card {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.client_group .client_card h3 {
+  font-size: 19px;
+  line-height: 23px;
+  letter-spacing: 0.84px;
+  font-weight: 600;
+  color: var(--main-text);
+  margin-top: 24px;
+}
+/* client group end */
+
+/* ready to started */
+.ready_started {
+  width: 100%;
+  padding: 43px 0;
+  background: transparent
+    linear-gradient(180deg, #fff3eb54 0%, #fff3eb00 19%, #fff3eb 100%) 0% 0%
+    no-repeat padding-box;
+}
+.ready_started .text_content h2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: 0.51px;
+  color: var(--main-text);
+  margin-bottom: 18px;
+}
+.ready_started .text_content p {
+  padding-right: 30px;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.88px;
+  color: var(--secondary-text);
+}
+/* ready to started end */
+
+/* out partners start */
+.our_partners {
+  width: 100%;
+  padding: 110px 0;
+}
+.our_partners .partners_logo {
+  text-align: center;
+}
+.our_partners .partners_logo .fake_logo {
+  background: #54539d;
+  color: #fff;
+}
+.our_partners .align_middle {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: center;
+}
+/* out partners end */
+
 /* responsive */
-@media only screen and (max-width: 1140px) {
-  .main_header {
-    padding: 0 40px;
+@media only screen and (min-width: 1200px) {
+  .section_container {
+    padding-left: 95px;
   }
-  .slider,
-  .what_sms,
-  .try_it_now,
-  .why_sms {
-    padding: 0 70px;
+  .work_slide_section .section_container {
+    padding: 0 85px;
   }
-  .work_slide_section {
-    padding: 0 180px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .work_slide_section {
-    padding: 0 100px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  /* header start*/
-  .main_header {
-    padding: 0 20px;
-  }
-  .slider {
-    padding: 0 20px;
-  }
-  .slider h2 {
-    font-size: 32px;
-    line-height: 30px;
-  }
-  .slider_button {
-    text-align: center;
-  }
-  /* work slider */
-  .work_slide_section {
-    padding: 0 20px;
-  }
-  .works_slider .carousel-inner {
-    border-radius: 10px;
-  }
-  .works_slider .prev_btn {
-    display: none;
-  }
-  .works_slider .next_btn {
-    display: none;
+  .ready_started .section_container {
+    padding: 0 95px;
   }
 }
