@@ -514,10 +514,12 @@ img {
   padding-bottom: 116px;
 }
 .map_container {
+  margin-bottom: 60px;
+}
+.map_container #map {
+  width: 100%;
   height: 280px;
   border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 60px;
 }
 .contact_us .text_content > h3 {
   font-family: cabin;
@@ -556,6 +558,12 @@ img {
   border: 1px solid #dedeec;
   border-radius: 8px;
 }
+textarea.input_my_style {
+  height: 138px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.34px;
+}
 .input_my_style::placeholder {
   color: #a5a3ca;
 }
@@ -568,6 +576,9 @@ img {
   top: 50%;
   transform: translateY(-50%);
   line-height: 0;
+}
+.whys_to_connect {
+  display: none;
 }
 /* contact us */
 
@@ -746,11 +757,13 @@ img {
   }
   .try_it_now .my_input_1 {
     min-height: 39px;
+    font-size: 13px;
   }
   .my_submit_btn_2 {
     min-width: 136px;
     margin-top: 10px;
     margin-bottom: 30px;
+    font-size: 15px;
   }
   .try_it_now .text_content p:last-child {
     margin-bottom: 15px;
@@ -881,4 +894,65 @@ img {
     padding-top: 45px;
   }
   /* our partners end */
+  .map_container #map {
+    height: 232px;
+  }
+  .map_container {
+    margin-bottom: 35px;
+  }
+  .label_my_style {
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 0.53px;
+  }
+  .input_my_style {
+    height: 32px;
+    font-size: 11px;
+  }
+  .contact_us .my_submit_btn_2 {
+    min-width: 160px;
+    min-height: 39px;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  .display_none_mobile {
+    display: none;
+  }
+  .whys_to_connect {
+    display: block;
+    background: url(../images/background/mobile/base.svg);
+    background-size: cover;
+    padding-top: 39px;
+    padding-bottom: 70px;
+  }
+  .contact_us .text_content > h3 {
+    font-size: 19px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .contact_us .text_content > p {
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .media_my_style {
+    font-size: 13px;
+    letter-spacing: 0.31px;
+  }
+  .media_my_style_p {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.31px;
+    padding: 0;
+  }
+  .my_media_icon {
+    width: 28px;
+  }
+  .contact_us {
+    padding-bottom: 0;
+  }
 }
