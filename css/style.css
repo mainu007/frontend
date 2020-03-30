@@ -101,7 +101,7 @@ img {
   transition: 0.4s all;
 }
 .header .my_navbar.active_bg .navbar-brand img {
-  width: 92px;
+  max-width: 92px;
 }
 .my_nav_menu li a {
   font-size: 16px;
@@ -179,6 +179,7 @@ img {
   margin-bottom: 40px;
 }
 .top_slider p {
+  width: 85%;
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.88px;
@@ -196,7 +197,39 @@ img {
   font-size: 15px;
   color: #fff79e;
 }
-.top_slider .download_here_btn {
+.slider_email {
+  position: relative;
+}
+.slider_email .form-control {
+  min-height: 56px;
+  border-radius: 8px;
+  border: 1px solid #4bcf3d75;
+  padding-left: 53px;
+  color: var(--main-text);
+}
+.slider_email .form-control::placeholder {
+  color: #a5a3ca;
+}
+.top_slider .my_submit_btn_0 {
+  min-height: 56px;
+  min-width: 160px;
+  font-family: cabin;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 600;
+  background: #4bcf3d;
+  color: #fff;
+  border-radius: 8px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+.slider_email .icon {
+  position: absolute;
+  left: 23px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* .top_slider .download_here_btn {
   padding: 14px 23px;
 }
 .top_slider .download_here_btn span {
@@ -206,7 +239,7 @@ img {
   text-decoration: underline;
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
-}
+} */
 .top_slider .download_here_btn:hover span {
   text-decoration: none;
 }
@@ -592,6 +625,9 @@ textarea.input_my_style {
   padding-bottom: 55px;
   border-top: 2px solid #dedeec;
 }
+.footer .footer_logo img {
+  max-width: 160px;
+}
 .footer .footer_content p a {
   font-size: 17px;
   letter-spacing: 0.27px;
@@ -868,6 +904,16 @@ textarea.input_my_style {
   .top_slider .download_here_btn img {
     max-width: 20px;
   }
+  /* new code */
+  .slider_email .form-control {
+    min-height: 40px;
+    font-size: 13px;
+  }
+  .top_slider .my_submit_btn_0 {
+    min-height: 40px;
+    min-width: 100%;
+    font-size: 13px;
+  }
 
   /* slider end */
   .what_sms {
@@ -889,7 +935,12 @@ textarea.input_my_style {
     padding: 0;
   }
   .try_it_now .try_image {
-    padding: 32px 84px 0;
+    padding-top: 32px;
+  }
+  .try_it_now .try_image img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
   }
   .try_it_now .text_content h2 {
     font-size: 19px;
