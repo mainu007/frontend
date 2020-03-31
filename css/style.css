@@ -444,6 +444,24 @@ img {
 .works_slider .control_btn_2 {
   display: none;
 }
+.works_slider .carousel-indicators {
+  align-items: center;
+}
+.works_slider .carousel-indicators li {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+  background-color: #7674af66;
+  /* background-color: #a5a3ca; */
+  border-radius: 50%;
+  transition: width 0.4s;
+}
+.works_slider .carousel-indicators .active {
+  width: 17px;
+  height: 17px;
+  background-color: #ed1c24;
+  border: 4px solid #7674af3d;
+}
 /* work slider section end */
 
 /* free trail section */
@@ -845,6 +863,12 @@ textarea.input_my_style {
   }
 }
 
+/* mobile screen <= 576px */
+@media only screen and (max-width: 992px) {
+  .works_slider {
+    padding: 0 20px;
+  }
+}
 /* mobile screen <= 576px */
 @media only screen and (max-width: 576px) {
   .header .my_navbar .container {
