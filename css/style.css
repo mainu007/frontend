@@ -456,7 +456,6 @@ header .carousel-indicators .active {
   height: 14px;
   opacity: 1;
   background-color: #7674af66;
-  /* background-color: #a5a3ca; */
   border-radius: 50%;
   transition: width 0.4s;
 }
@@ -1025,6 +1024,14 @@ textarea.input_my_style {
   /* why sms end */
   .works_slider {
     padding: 0;
+  }
+  .works_slider .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+  }
+  .works_slider .carousel-indicators .active {
+    width: 11px;
+    height: 11px;
   }
   .works_slider .carousel-inner {
     border-radius: 8px;
