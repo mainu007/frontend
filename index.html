@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SMS</title>
-    <!-- google font -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Cabin&display=swap"
-      rel="stylesheet"
-    />
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- main style -->
@@ -989,19 +984,19 @@
     <footer class="footer display_none_mobile">
       <div class="container">
         <div class="row my_margin_set">
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="footer_logo">
               <img src="images/logo/logo_2020.png" alt="logo" />
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="footer_content">
               <p><a href="#">About Us</a></p>
               <p><a href="#">Contact</a></p>
               <p><a href="#">Terms & Conditions</a></p>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="footer_content">
               <p>
                 <i class="icon">
@@ -1023,7 +1018,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="footer_content">
               <p class="my_para">Subscribe to our newsletter</p>
               <form>
@@ -1055,7 +1050,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="media">
               <img src="images/icon/ic_phone.svg" class="mr-3" alt="icon" />
               <div class="media-body media_my_style_2">
@@ -1064,7 +1059,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="media">
               <img src="images/icon/ic_mobile.svg" class="mr-3" alt="icon" />
               <div class="media-body media_my_style_2">
@@ -1073,7 +1068,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="media">
               <img src="images/icon/ic_e-mail.svg" class="mr-3" alt="icon" />
               <div class="media-body media_my_style_2">
@@ -1082,7 +1077,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="media">
               <img src="images/icon/ic_location.svg" class="mr-3" alt="icon" />
               <div class="media-body media_my_style_2">
@@ -1096,33 +1091,7 @@
     </footer>
     <!-- footer end -->
 
-    <!-- google map js -->
-    <script>
-      function initMap() {
-        let map, marker;
-        let location = { lat: 40.712776, lng: -74.005974 };
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: location,
-          zoom: 8,
-        });
-        marker = new google.maps.Marker({
-          position: location,
-          map: map,
-        });
-      }
-    </script>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8Q-ZGgLVt3gWgJrYvz2eRJy3OtiePJzo&callback=initMap"
-    ></script>
-    <!-- bootstrap js -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- navScroll js -->
-    <script src="js/myNav.js"></script>
-    <!-- sidebar -->
+    <!-- sidebar start -->
     <div class="my_sidebar">
       <div class="overlay"></div>
       <div class="side_navbar" id="mySideNav">
@@ -1198,6 +1167,33 @@
       </div>
     </div>
     <!-- sidebar end -->
+
+    <!-- google map js -->
+    <script>
+      function initMap() {
+        let map, marker;
+        let location = { lat: 40.712776, lng: -74.005974 };
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: location,
+          zoom: 8,
+        });
+        marker = new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8Q-ZGgLVt3gWgJrYvz2eRJy3OtiePJzo&callback=initMap"
+    ></script>
+    <!-- bootstrap js -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- navScroll js -->
+    <script src="js/myNav.js"></script>
     <!-- main js -->
     <script src="js/main.js"></script>
   </body>

@@ -1,8 +1,21 @@
-/* default style */
-:root {
-  --main-text: #383784;
-  --secondary-text: #7674af;
+/* import font */
+@font-face {
+  font-family: cabinRegular;
+  src: url(./font/Cabin-Regular.otf);
 }
+@font-face {
+  font-family: cabinMedium;
+  src: url(./font/Cabin-Medium.otf);
+}
+@font-face {
+  font-family: cabinSemiBold;
+  src: url(./font/Cabin-SemiBold.otf);
+}
+@font-face {
+  font-family: cabinBold;
+  src: url(./font/Cabin-Bold.otf);
+}
+/* default style */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -18,7 +31,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: cabin, sans-serif;
+  font-family: cabinRegular;
 }
 a:hover {
   text-decoration: none;
@@ -31,10 +44,9 @@ img {
 .default_success_btn {
   min-width: 240px;
   min-height: 55px;
-  font-family: cabin;
+  font-family: cabinBold;
   font-size: 18px;
   line-height: 22px;
-  font-weight: 600;
   background: #4bcf3d;
   color: #fff;
   border-radius: 8px;
@@ -48,10 +60,9 @@ img {
 .my_submit_btn_2 {
   min-width: 160px;
   min-height: 48px;
-  font-family: cabin;
+  font-family: cabinBold;
   font-size: 19px;
   line-height: 22px;
-  font-weight: 600;
   background: #4bcf3d;
   color: #fff;
   border-radius: 8px;
@@ -94,7 +105,6 @@ img {
 }
 .my_nav_menu li a {
   font-size: 16px;
-  font-family: cabin;
   letter-spacing: 0.26px;
   padding: 5px 12px;
   color: #fff !important;
@@ -126,9 +136,11 @@ img {
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
+.navbar_button {
+  font-family: cabinSemiBold;
+}
 .nav_login_btn {
   font-size: 17px;
-  font-weight: 500;
   letter-spacing: 0.27px;
   color: #ffb073;
   text-decoration: underline;
@@ -154,6 +166,7 @@ img {
   background: #ff882b;
   padding: 9px 23px;
   border-radius: 8px;
+  font-family: cabinMedium;
 }
 /* top slider */
 /* top slider new*/
@@ -176,7 +189,7 @@ header .carousel-indicators .active {
 }
 .top_slider h2 {
   font-size: 44px;
-  font-weight: 700;
+  font-family: cabinBold;
   color: #fff;
   letter-spacing: 0.7px;
   line-height: 56px;
@@ -209,7 +222,7 @@ header .carousel-indicators .active {
   border-radius: 8px;
   border: 1px solid #4bcf3d75;
   padding-left: 53px;
-  color: var(--main-text);
+  color: #383784;
 }
 .slider_email .form-control::placeholder {
   color: #a5a3ca;
@@ -217,10 +230,9 @@ header .carousel-indicators .active {
 .top_slider .my_submit_btn_0 {
   min-height: 56px;
   min-width: 160px;
-  font-family: cabin;
+  font-family: cabinBold;
   font-size: 19px;
   line-height: 22px;
-  font-weight: 600;
   background: #4bcf3d;
   color: #fff;
   border-radius: 8px;
@@ -233,17 +245,6 @@ header .carousel-indicators .active {
   top: 50%;
   transform: translateY(-50%);
 }
-/* .top_slider .download_here_btn {
-  padding: 14px 23px;
-}
-.top_slider .download_here_btn span {
-  font-size: 17px;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: underline;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all;
-} */
 .top_slider .download_here_btn:hover span {
   text-decoration: none;
 }
@@ -253,11 +254,14 @@ header .carousel-indicators .active {
   padding: 116px 0;
 }
 .what_sms .what_sms_text h2 {
+  font-family: cabinSemiBold;
   font-size: 32px;
   line-height: 39px;
-  font-weight: 600;
-  color: var(--main-text);
+  color: #383784;
   margin-bottom: 45px;
+}
+.what_sms .what_sms_text {
+  font-family: cabinMedium;
 }
 .what_sms .what_sms_text .border_span {
   position: relative;
@@ -275,7 +279,7 @@ header .carousel-indicators .active {
   font-size: 17px;
   line-height: 28px;
   letter-spacing: 0.27px;
-  color: var(--secondary-text);
+  color: #7674af;
   font-weight: 500;
   margin-bottom: 36px;
 }
@@ -290,7 +294,7 @@ header .carousel-indicators .active {
   font-size: 17px;
   line-height: 28px;
   letter-spacing: 0.27px;
-  color: var(--secondary-text);
+  color: #7674af;
   font-weight: 500px;
   margin-left: 15px;
 }
@@ -320,24 +324,24 @@ header .carousel-indicators .active {
 .try_it_now .text_content h2 {
   font-size: 32px;
   line-height: 40px;
-  font-weight: 700;
   letter-spacing: 0.51px;
-  color: var(--main-text);
+  color: #383784;
   margin-bottom: 18px;
+  font-family: cabinBold;
 }
 .try_it_now .text_content p {
   width: 80%;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0.32px;
-  color: var(--secondary-text);
+  color: #7674af;
   margin-bottom: 30px;
 }
 .try_it_now .text_content p:last-child {
   width: 100%;
   font-size: 15px;
   line-height: 22px;
-  color: var(--secondary-text);
+  color: #7674af;
   margin-top: 7px;
 }
 .try_it_now .text_content p:last-child span {
@@ -348,7 +352,7 @@ header .carousel-indicators .active {
   border-radius: 8px;
   border: 0.64px solid #4bcf3d75;
   padding-left: 53px;
-  color: var(--main-text);
+  color: #383784;
 }
 .try_it_now .my_input_1::placeholder {
   color: #a5a3ca;
@@ -371,11 +375,11 @@ header .carousel-indicators .active {
   padding-top: 112px;
 }
 .head_title h2 {
+  font-family: cabinSemiBold;
   font-size: 32px;
   line-height: 39px;
   letter-spacing: 0.77px;
-  color: var(--main-text);
-  font-weight: 600;
+  color: #383784;
   text-align: center;
   margin-bottom: 75px;
   position: relative;
@@ -402,18 +406,19 @@ header .carousel-indicators .active {
   padding-top: 5px;
 }
 .why_sms .why_sms_content .text_content h3 {
+  font-family: cabinMedium;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.24px;
-  color: var(--main-text);
-  font-weight: 600;
+  color: #383784;
   margin-bottom: 15px;
 }
 .why_sms .why_sms_content .text_content p {
+  font-family: cabinMedium;
   font-size: 15px;
   line-height: 24px;
   letter-spacing: 0.24px;
-  color: var(--secondary-text);
+  color: #7674af;
 }
 /* why choose sms end */
 
@@ -488,8 +493,8 @@ header .carousel-indicators .active {
   font-size: 19px;
   line-height: 23px;
   letter-spacing: 0.84px;
-  font-weight: 600;
-  color: var(--main-text);
+  font-family: cabinMedium;
+  color: #383784;
   margin-top: 24px;
 }
 /* client group end */
@@ -505,9 +510,9 @@ header .carousel-indicators .active {
 .ready_started .text_content h2 {
   font-size: 32px;
   line-height: 40px;
-  font-weight: 700;
+  font-family: cabinBold;
   letter-spacing: 0.51px;
-  color: var(--main-text);
+  color: #383784;
   margin-bottom: 18px;
 }
 .ready_started .text_content p {
@@ -515,7 +520,7 @@ header .carousel-indicators .active {
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0.88px;
-  color: var(--secondary-text);
+  color: #7674af;
 }
 /* ready to started end */
 
@@ -544,12 +549,11 @@ header .carousel-indicators .active {
   text-align: center;
   font-size: 17px;
   line-height: 20px;
-  font-family: cabin;
   letter-spacing: 0.75px;
-  color: var(--main-text);
+  color: #383784;
 }
 .our_partners .data_vision {
-  background: var(--main-text);
+  background: #383784;
   border-radius: 3px;
 }
 .our_partners .text {
@@ -577,23 +581,21 @@ header .carousel-indicators .active {
   border-radius: 16px;
 }
 .contact_us .text_content > h3 {
-  font-family: cabin;
+  font-family: cabinSemiBold;
   font-size: 24px;
-  font-weight: 600;
   letter-spacing: 0.38px;
-  color: var(--main-text);
+  color: #383784;
 }
 .contact_us .text_content > p {
-  font-family: cabin;
   font-size: 17px;
   letter-spacing: 0.27px;
   color: #7674af;
 }
 .media_my_style {
   font-size: 15px;
-  font-weight: 600;
+  font-family: cabinSemiBold;
   letter-spacing: 0.36px;
-  color: var(--main-text);
+  color: #383784;
 }
 .media_my_style_p {
   font-size: 15px;
@@ -601,10 +603,9 @@ header .carousel-indicators .active {
   color: #7674af;
 }
 .label_my_style {
-  font-family: cabin;
+  font-family: cabinSemiBold;
   font-size: 15px;
-  font-weight: 600;
-  color: var(--main-text);
+  color: #383784;
   letter-spacing: 0.66px;
 }
 .input_my_style {
@@ -650,9 +651,10 @@ textarea.input_my_style {
   max-width: 160px;
 }
 .footer .footer_content p a {
+  font-family: cabinMedium;
   font-size: 17px;
   letter-spacing: 0.27px;
-  color: var(--main-text);
+  color: #383784;
 }
 .footer .footer_content p a:hover {
   text-decoration: underline;
@@ -662,16 +664,15 @@ textarea.input_my_style {
 }
 .footer .footer_content .my_para {
   font-size: 17px;
-  font-family: cabin;
-  font-weight: 600;
+  font-family: cabinMedium;
   letter-spacing: 0.27px;
-  color: var(--main-text);
+  color: #383784;
 }
 .footer .footer_content .input_mail_2 {
   position: relative;
 }
 .footer .input_mail_2 .my_input {
-  color: var(--main-text);
+  color: #383784;
   min-height: 48px;
   padding-left: 45px;
   border: 1px solid #4bcf3d;
@@ -698,12 +699,12 @@ textarea.input_my_style {
 }
 .media_my_style_2 h6 {
   font-size: 15px;
-  font-family: cabin;
+  font-family: cabinMedium;
   letter-spacing: 0.36px;
   color: #7674af;
 }
 .media_my_style_2 p {
-  font-family: cabin;
+  font-family: cabinMedium;
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.36px;
@@ -765,17 +766,16 @@ textarea.input_my_style {
   margin-bottom: 12px;
 }
 .my_side_nav li a {
-  font-family: cabin;
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.21px;
-  color: var(--secondary-text);
+  color: #7674af;
   padding: 5px 0px;
   position: relative;
 }
 .my_side_nav li.menu_active_2 a {
-  font-weight: 600;
-  color: var(--main-text);
+  font-family: cabinSemiBold;
+  color: #383784;
 }
 .my_side_nav li a::after {
   content: "";
@@ -796,6 +796,7 @@ textarea.input_my_style {
 }
 .side_btn_login,
 .side_btn_singup {
+  font-family: cabinSemiBold;
   font-size: 15px;
   letter-spacing: 0.24px;
   min-height: 39px;
@@ -832,12 +833,12 @@ textarea.input_my_style {
   line-height: 50px;
 }
 .footer_button a {
+  font-family: cabinMedium;
   display: block;
   font-size: 13px;
   letter-spacing: 0.21px;
   padding: 8px 0;
-  color: var(--main-text);
-  font-weight: 600;
+  color: #383784;
 }
 .footer_button a:hover {
   text-decoration: underline;
@@ -846,9 +847,10 @@ textarea.input_my_style {
   width: 16px;
 }
 .my_media_style_3 p {
+  font-family: cabinMedium;
   font-size: 11px;
   letter-spacing: 0.18px;
-  color: var(--main-text);
+  color: #383784;
   width: 80%;
 }
 /* sidebar style end */
