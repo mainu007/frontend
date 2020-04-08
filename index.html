@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SMS</title>
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- main style -->
@@ -1091,7 +1096,33 @@
     </footer>
     <!-- footer end -->
 
-    <!-- sidebar start -->
+    <!-- google map js -->
+    <script>
+      function initMap() {
+        let map, marker;
+        let location = { lat: 40.712776, lng: -74.005974 };
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: location,
+          zoom: 8,
+        });
+        marker = new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8Q-ZGgLVt3gWgJrYvz2eRJy3OtiePJzo&callback=initMap"
+    ></script>
+    <!-- bootstrap js -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- navScroll js -->
+    <script src="js/myNav.js"></script>
+    <!-- sidebar -->
     <div class="my_sidebar">
       <div class="overlay"></div>
       <div class="side_navbar" id="mySideNav">
@@ -1167,33 +1198,6 @@
       </div>
     </div>
     <!-- sidebar end -->
-
-    <!-- google map js -->
-    <script>
-      function initMap() {
-        let map, marker;
-        let location = { lat: 40.712776, lng: -74.005974 };
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: location,
-          zoom: 8,
-        });
-        marker = new google.maps.Marker({
-          position: location,
-          map: map,
-        });
-      }
-    </script>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8Q-ZGgLVt3gWgJrYvz2eRJy3OtiePJzo&callback=initMap"
-    ></script>
-    <!-- bootstrap js -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- navScroll js -->
-    <script src="js/myNav.js"></script>
     <!-- main js -->
     <script src="js/main.js"></script>
   </body>
